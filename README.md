@@ -1,4 +1,4 @@
-# QAX_VPN Any User Password Reset
+# QAX_VPN Any User Password Reset Poc
 
 
    ### 使用方法
